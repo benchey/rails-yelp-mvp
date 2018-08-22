@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xs-6">
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <div class="form-group">
+          <%= f.label :content %>
+          <%= f.text_field :content, class: "form-control"  %>
+        </div>
+
+        <div class="form-group">
+          <%= f.input :rating, collection: Review::RATING, class: "form-control"  %>
+        </div>
+
+        <%= f.submit "Add a review", class: "btn btn-primary" %>
+
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
